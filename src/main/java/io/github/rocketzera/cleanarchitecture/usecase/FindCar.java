@@ -12,11 +12,11 @@ import io.github.rocketzera.cleanarchitecture.usecase.assembler.CarAssembler;
 @Component
 public class FindCar {
 
-	@Autowired
-	private CarRepository repository;
-	
-	public List<CarDTO> findAll() {
-		return CarAssembler.adapt(repository.findAll());
-	}
-	
+    @Autowired
+    private CarRepository repository;
+
+    public List<CarDTO> findAll() {
+        return CarAssembler.adapt(repository.findAll());
+    }
+
 }

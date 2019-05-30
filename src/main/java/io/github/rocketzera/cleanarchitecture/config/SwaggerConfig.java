@@ -22,19 +22,19 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 @Import(value = { SpringDataRestConfiguration.class })
 public class SwaggerConfig {
 
-	@Bean
-	public Docket api() {
-		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.ant("/v1/**")).build();
-	}
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.ant("/v1/**")).build();
+    }
 
-	@Bean
-	public UiConfiguration uiConfig() {
-		return UiConfigurationBuilder.builder().deepLinking(true).displayOperationId(true).defaultModelsExpandDepth(1)
-				.defaultModelExpandDepth(1).defaultModelRendering(ModelRendering.EXAMPLE).displayRequestDuration(true)
-				.docExpansion(DocExpansion.NONE).filter(true).maxDisplayedTags(null)
-				.operationsSorter(OperationsSorter.ALPHA).showExtensions(true).tagsSorter(TagsSorter.ALPHA)
-				.supportedSubmitMethods(UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS).validatorUrl(null).build();
-	}
+    @Bean
+    public UiConfiguration uiConfig() {
+        return UiConfigurationBuilder.builder().deepLinking(true).displayOperationId(true).defaultModelsExpandDepth(1)
+                .defaultModelExpandDepth(1).defaultModelRendering(ModelRendering.EXAMPLE).displayRequestDuration(true)
+                .docExpansion(DocExpansion.NONE).filter(true).maxDisplayedTags(null)
+                .operationsSorter(OperationsSorter.ALPHA).showExtensions(true).tagsSorter(TagsSorter.ALPHA)
+                .supportedSubmitMethods(UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS).validatorUrl(null).build();
+    }
 
 }

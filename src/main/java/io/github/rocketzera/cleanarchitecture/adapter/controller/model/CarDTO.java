@@ -15,18 +15,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CarDTO {
-	
-	private Long id;
-	
-	@NotBlank
-	@ApiModelProperty(example = "Maverick")
-	private String name;
 
-	@NotBlank
-	@ApiModelProperty(example = "Dominus")
-	private String model;
+    private Long id;
 
-	@NotNull
-	private Color color;
-	
+    @NotBlank
+    @ApiModelProperty(example = "Maverick")
+    private String name;
+
+    @NotBlank
+    @ApiModelProperty(example = "Dominus")
+    private String model;
+
+    @NotNull
+    private Color color;
+
 }

@@ -11,12 +11,12 @@ import io.github.rocketzera.cleanarchitecture.usecase.assembler.CarAssembler;
 @Component
 public class CreateCar {
 
-	@Autowired
-	private CarRepository repository;
-	
-	public CarDTO create(CarDTO dto) {
-		Car savedCar = repository.save(CarAssembler.adapt(dto));
-		return CarAssembler.adapt(savedCar);
-	}
-	
+    @Autowired
+    private CarRepository repository;
+
+    public CarDTO create(CarDTO dto) {
+        Car savedCar = repository.save(CarAssembler.adapt(dto));
+        return CarAssembler.adapt(savedCar);
+    }
+
 }
