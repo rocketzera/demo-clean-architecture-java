@@ -21,24 +21,24 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping(path = "/v1/car")
 public class CarController {
-	
+
 	@Autowired
 	private CreateCar createCar;
-	
+
 	@Autowired
 	private FindCar findCar;
-	
-    @GetMapping
-    @ApiOperation("Car list")
-    public List<CarDTO> findAll() {
-        return this.findCar.findAll();
-    }
-    
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    @ApiOperation("Create car")
-    public CarDTO save(@Valid @RequestBody CarDTO dto) {
-        return this.createCar.create(dto);
-    }
-	
+
+	@GetMapping
+	@ApiOperation("Car list")
+	public List<CarDTO> findAll() {
+		return this.findCar.findAll();
+	}
+
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	@ApiOperation("Create car")
+	public CarDTO save(@Valid @RequestBody CarDTO dto) {
+		return this.createCar.create(dto);
+	}
+
 }
