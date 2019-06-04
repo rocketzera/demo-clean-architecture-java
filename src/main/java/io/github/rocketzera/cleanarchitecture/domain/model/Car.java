@@ -1,4 +1,4 @@
-package io.github.rocketzera.cleanarchitecture.domain.entity;
+package io.github.rocketzera.cleanarchitecture.domain.model;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

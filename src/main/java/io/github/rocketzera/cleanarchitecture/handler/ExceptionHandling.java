@@ -1,4 +1,4 @@
-package io.github.rocketzera.cleanarchitecture.usecase.exception.handler;
+package io.github.rocketzera.cleanarchitecture.handler;
 
 import java.util.HashMap;
 import java.util.Map;
